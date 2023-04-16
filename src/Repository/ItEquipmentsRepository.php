@@ -24,12 +24,30 @@ class ItEquipmentsRepository {
         $db = $this->databaseRepository->getConnection();
         $statement = $db->prepare($query);
         $statement->execute();
-        $result =  $statement->fetchAll();
+        $result =  $statement->fetchAll(\PDO::FETCH_ASSOC);
         $statement->closeCursor();
           // Debug output
        
     
         return $result;
+    }
+
+    public function getSecretaries():?array 
+    {
+        $query = "SELECT * FROM ekosystem.secretaries";
+        $db = $this->databaseRepository->getConnection();
+        $statement = $db->prepare($query);
+        $statement->execute();
+        $secretaries = $statement->fetchAll(\PDO::FETCH_ASSOC);
+        $statement->closeCursor();
+        if (is_array($secretaries)) {
+           
+            return $secretaries;
+        
+        }
+        return null;
+        
+        
     }
     
 }
