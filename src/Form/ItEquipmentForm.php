@@ -34,6 +34,7 @@ class ItEquipmentForm extends AbstractType
         ->add('type', TextType::class, [
             'label' => 'Type',
             'required' => true,
+            
         ])
         ->add('index', TextType::class, [
             'label' => 'index',

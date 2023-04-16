@@ -38,6 +38,7 @@ class ListEquipmentsController extends AbstractController
     return $this->render('it_equipment/create.html.twig', [
         'form' => $form->createView(),
     ]);
+    
 
     }
 }
