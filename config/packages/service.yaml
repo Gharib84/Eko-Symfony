@@ -1,0 +1,7 @@
+services:
+    App\Repository\DatabaseRepository:
+        arguments:
+            $databaseName: '%env(ekosystem)%'
+            $userName: '%env(root)%'
+            $password: '%env()%'
+            $hostName: '%env(127.0.0.1:3306)%'
