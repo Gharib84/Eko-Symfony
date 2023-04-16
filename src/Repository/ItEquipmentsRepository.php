@@ -46,7 +46,7 @@ class ItEquipmentsRepository {
         
         }
         return null;
-        'required' => true
+    
         
         
     }
